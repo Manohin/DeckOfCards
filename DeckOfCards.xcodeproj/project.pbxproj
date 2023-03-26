@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		8A51341729CF923C00AA10D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51341629CF923C00AA10D5 /* AppDelegate.swift */; };
 		8A51341929CF923C00AA10D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51341829CF923C00AA10D5 /* SceneDelegate.swift */; };
-		8A51341B29CF923C00AA10D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51341A29CF923C00AA10D5 /* ViewController.swift */; };
+		8A51341B29CF923C00AA10D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51341A29CF923C00AA10D5 /* MainViewController.swift */; };
 		8A51341E29CF923C00AA10D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A51341C29CF923C00AA10D5 /* Main.storyboard */; };
 		8A51342029CF923E00AA10D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A51341F29CF923E00AA10D5 /* Assets.xcassets */; };
 		8A51342329CF923E00AA10D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A51342129CF923E00AA10D5 /* LaunchScreen.storyboard */; };
+		8A51342B29CF925200AA10D5 /* ResponseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51342A29CF925200AA10D5 /* ResponseCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A51341329CF923C00AA10D5 /* DeckOfCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckOfCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A51341629CF923C00AA10D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A51341829CF923C00AA10D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A51341A29CF923C00AA10D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A51341A29CF923C00AA10D5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A51341D29CF923C00AA10D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A51341F29CF923E00AA10D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A51342229CF923E00AA10D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A51342429CF923E00AA10D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A51342A29CF925200AA10D5 /* ResponseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				8A51341629CF923C00AA10D5 /* AppDelegate.swift */,
 				8A51341829CF923C00AA10D5 /* SceneDelegate.swift */,
-				8A51341A29CF923C00AA10D5 /* ViewController.swift */,
+				8A51342A29CF925200AA10D5 /* ResponseCard.swift */,
+				8A51341A29CF923C00AA10D5 /* MainViewController.swift */,
 				8A51341C29CF923C00AA10D5 /* Main.storyboard */,
 				8A51341F29CF923E00AA10D5 /* Assets.xcassets */,
 				8A51342129CF923E00AA10D5 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A51341B29CF923C00AA10D5 /* ViewController.swift in Sources */,
+				8A51341B29CF923C00AA10D5 /* MainViewController.swift in Sources */,
 				8A51341729CF923C00AA10D5 /* AppDelegate.swift in Sources */,
 				8A51341929CF923C00AA10D5 /* SceneDelegate.swift in Sources */,
+				8A51342B29CF925200AA10D5 /* ResponseCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +297,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Manohin.DeckOfCards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +328,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Manohin.DeckOfCards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

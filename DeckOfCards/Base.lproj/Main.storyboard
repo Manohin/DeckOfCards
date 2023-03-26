@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="DeckOfCards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-ei-WXC">
+                                <rect key="frame" x="16" y="203" width="361" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGF-0v-geJ">
+                                <rect key="frame" x="148" y="409" width="97" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Поехали!"/>
+                                <connections>
+                                    <action selector="showCardsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ff-Fp-b0W"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="exS-kJ-tHI">
+                                <rect key="frame" x="29.666666666666657" y="574" width="334" height="191"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x20-5T-E9c">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="191"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="Aan-qe-0cg"/>
+                                            <constraint firstAttribute="height" constant="191" id="p6v-hQ-Ktg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rWW-Zs-Ayi">
+                                        <rect key="frame" x="188" y="0.0" width="146" height="191"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="191" id="kod-Jf-323"/>
+                                            <constraint firstAttribute="width" constant="146" id="mjv-cp-er9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="NwB-fV-64O"/>
+                                    <constraint firstAttribute="width" constant="334" id="oFP-cQ-6WK"/>
+                                </constraints>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mtV-cM-c2V">
+                                <rect key="frame" x="0.0" y="59" width="393" height="4"/>
+                            </progressView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-3Q-RxT">
+                                <rect key="frame" x="148" y="461" width="97" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EDq-AC-x3B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Заново"/>
+                                <connections>
+                                    <action selector="restartButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbG-nm-Tow"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="exS-kJ-tHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bs7-sA-agg"/>
+                            <constraint firstItem="nIf-3Q-RxT" firstAttribute="top" secondItem="AGF-0v-geJ" secondAttribute="bottom" constant="17.666666666666686" id="GeP-Jf-dJr"/>
+                            <constraint firstItem="9Qb-ei-WXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="144" id="Lmz-7k-5z5"/>
+                            <constraint firstItem="mtV-cM-c2V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rmv-15-WrG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="exS-kJ-tHI" secondAttribute="bottom" constant="53" id="U9b-E6-UBI"/>
+                            <constraint firstItem="AGF-0v-geJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W1T-7j-iJM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nIf-3Q-RxT" secondAttribute="trailing" constant="148" id="XYA-Bf-xd2"/>
+                            <constraint firstItem="mtV-cM-c2V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b56-Ut-PDx"/>
+                            <constraint firstItem="nIf-3Q-RxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="dRT-qE-iV3"/>
+                            <constraint firstItem="AGF-0v-geJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSY-5R-leu"/>
+                            <constraint firstItem="9Qb-ei-WXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pAY-g8-GOh"/>
+                            <constraint firstItem="mtV-cM-c2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t2k-Tx-0Da"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Qb-ei-WXC" secondAttribute="trailing" constant="16" id="w7T-Uh-ljI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstCardImageView" destination="x20-5T-E9c" id="0IW-P8-2VG"/>
+                        <outlet property="progressBar" destination="mtV-cM-c2V" id="vdq-fY-fWV"/>
+                        <outlet property="restartButton" destination="nIf-3Q-RxT" id="DKo-gP-qMP"/>
+                        <outlet property="resultsLabel" destination="9Qb-ei-WXC" id="trp-MB-Eug"/>
+                        <outlet property="secondCardImageView" destination="rWW-Zs-Ayi" id="CnY-ER-nwj"/>
+                        <outlet property="showCardsButton" destination="AGF-0v-geJ" id="bpS-Xv-Ohm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="14.503816793893129" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
