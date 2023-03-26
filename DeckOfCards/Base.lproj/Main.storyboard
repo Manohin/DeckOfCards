@@ -55,12 +55,6 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mtV-cM-c2V">
                                 <rect key="frame" x="0.0" y="59" width="393" height="4"/>
                             </progressView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mdW-IZ-npm">
-                                <rect key="frame" x="186.66666666666666" y="648" width="20" height="20"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </activityIndicatorView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-3Q-RxT">
                                 <rect key="frame" x="156" y="409" width="81.333333333333314" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
@@ -69,6 +63,13 @@
                                     <action selector="restartButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbG-nm-Tow"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mdW-IZ-npm">
+                                <rect key="frame" x="186" y="343" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesWhenStopped" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.84702605009078979" green="0.95701068639755249" blue="0.93338078260421753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,11 +77,9 @@
                             <constraint firstItem="exS-kJ-tHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bs7-sA-agg"/>
                             <constraint firstItem="nIf-3Q-RxT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBF-oo-hRP"/>
                             <constraint firstItem="9Qb-ei-WXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="144" id="Lmz-7k-5z5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mdW-IZ-npm" secondAttribute="bottom" constant="150" id="PIo-3p-VOO"/>
                             <constraint firstItem="mtV-cM-c2V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rmv-15-WrG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="exS-kJ-tHI" secondAttribute="bottom" constant="53" id="U9b-E6-UBI"/>
                             <constraint firstItem="AGF-0v-geJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W1T-7j-iJM"/>
-                            <constraint firstItem="mdW-IZ-npm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X1c-j4-QlW"/>
                             <constraint firstItem="mtV-cM-c2V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b56-Ut-PDx"/>
                             <constraint firstItem="nIf-3Q-RxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dNF-Zq-uNL"/>
                             <constraint firstItem="AGF-0v-geJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSY-5R-leu"/>
@@ -91,6 +90,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="mdW-IZ-npm" id="DAi-lK-NmZ"/>
+                        <outlet property="cardsStackView" destination="exS-kJ-tHI" id="0WB-ZO-5KI"/>
                         <outlet property="firstCardImageView" destination="x20-5T-E9c" id="0IW-P8-2VG"/>
                         <outlet property="progressBar" destination="mtV-cM-c2V" id="vdq-fY-fWV"/>
                         <outlet property="restartButton" destination="nIf-3Q-RxT" id="DKo-gP-qMP"/>

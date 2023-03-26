@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet var showCardsButton: UIButton!
     
+    @IBOutlet var cardsStackView: UIStackView!
     @IBOutlet var restartButton: UIButton!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -37,6 +38,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.center = cardsStackView.center
         activityIndicator.stopAnimating()
         resultsLabel.text = """
 Карта, содержащая число, приносит количество очков, равное номиналу. Каждая карта с картинкой или туз, приносит 10 очков.\n
