@@ -17,9 +17,9 @@ class MainViewController: UIViewController {
     @IBOutlet var progressBar: UIProgressView!
     
     @IBOutlet var showCardsButton: UIButton!
+    @IBOutlet var restartButton: UIButton!
     
     @IBOutlet var cardsStackView: UIStackView!
-    @IBOutlet var restartButton: UIButton!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
@@ -31,11 +31,9 @@ class MainViewController: UIViewController {
                 showCardsButton.isHidden = true
                 progressBar.isHidden = true
                 restartButton.isHidden = false
-                
             }
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.center = cardsStackView.center
@@ -45,8 +43,6 @@ class MainViewController: UIViewController {
 Цель:\nНабрать 20 очков за 10 ходов
 """
     }
-    
-    
     @IBAction func showCardsButtonTapped(_ sender: UIButton) {
         sender.isHidden = true
         activityIndicator.startAnimating()
@@ -69,6 +65,7 @@ class MainViewController: UIViewController {
                 
                 let firstCardImageData = try! Data(contentsOf: card.cards[0].image)
                 let secondCardImageData = try! Data(contentsOf: card.cards[1].image)
+                
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     sender.setTitle("Раздать карты", for: .normal)
@@ -81,17 +78,13 @@ class MainViewController: UIViewController {
                         sender.isHidden = true
                         self.restartButton.isHidden = false
                     }
-                  
                     
                     sender.isHidden = false
                     self.firstCardImageView.image = UIImage(data: firstCardImageData)
                     self.secondCardImageView.image = UIImage(data: secondCardImageData)
                     self.progressBar.progress += 0.1
                     self.tappedCount += 1
-                    
-                    
                 }
-                
             } catch let error {
                 print(error.localizedDescription)
             }
