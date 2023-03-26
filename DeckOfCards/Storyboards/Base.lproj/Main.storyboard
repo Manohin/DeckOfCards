@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="4"/>
                             </progressView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-3Q-RxT">
-                                <rect key="frame" x="156" y="409" width="81.333333333333314" height="34.333333333333314"/>
+                                <rect key="frame" x="148" y="409" width="97" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Заново"/>
                                 <connections>
@@ -83,6 +83,7 @@
                             <constraint firstItem="mtV-cM-c2V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b56-Ut-PDx"/>
                             <constraint firstItem="nIf-3Q-RxT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dNF-Zq-uNL"/>
                             <constraint firstItem="AGF-0v-geJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSY-5R-leu"/>
+                            <constraint firstItem="nIf-3Q-RxT" firstAttribute="width" secondItem="AGF-0v-geJ" secondAttribute="width" multiplier="0.838488" constant="15.666666666666686" id="kVm-Ay-UHf"/>
                             <constraint firstItem="9Qb-ei-WXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pAY-g8-GOh"/>
                             <constraint firstItem="mtV-cM-c2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t2k-Tx-0Da"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Qb-ei-WXC" secondAttribute="trailing" constant="16" id="w7T-Uh-ljI"/>

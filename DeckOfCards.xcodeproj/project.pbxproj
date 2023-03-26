@@ -58,16 +58,48 @@
 		8A51341529CF923C00AA10D5 /* DeckOfCards */ = {
 			isa = PBXGroup;
 			children = (
-				8A51341629CF923C00AA10D5 /* AppDelegate.swift */,
-				8A51341829CF923C00AA10D5 /* SceneDelegate.swift */,
-				8A51342A29CF925200AA10D5 /* ResponseCard.swift */,
-				8A51341A29CF923C00AA10D5 /* MainViewController.swift */,
-				8A51341C29CF923C00AA10D5 /* Main.storyboard */,
+				8A51342C29D1002800AA10D5 /* Models */,
+				8A51342D29D1003200AA10D5 /* ViewControllers */,
+				8A51342F29D1004700AA10D5 /* System */,
+				8A51342E29D1003D00AA10D5 /* Storyboards */,
 				8A51341F29CF923E00AA10D5 /* Assets.xcassets */,
-				8A51342129CF923E00AA10D5 /* LaunchScreen.storyboard */,
-				8A51342429CF923E00AA10D5 /* Info.plist */,
 			);
 			path = DeckOfCards;
+			sourceTree = "<group>";
+		};
+		8A51342C29D1002800AA10D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A51342A29CF925200AA10D5 /* ResponseCard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A51342D29D1003200AA10D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A51341A29CF923C00AA10D5 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A51342E29D1003D00AA10D5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8A51341C29CF923C00AA10D5 /* Main.storyboard */,
+				8A51342129CF923E00AA10D5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8A51342F29D1004700AA10D5 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8A51341629CF923C00AA10D5 /* AppDelegate.swift */,
+				8A51341829CF923C00AA10D5 /* SceneDelegate.swift */,
+				8A51342429CF923E00AA10D5 /* Info.plist */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P894A63FN8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeckOfCards/Info.plist;
+				INFOPLIST_FILE = DeckOfCards/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P894A63FN8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DeckOfCards/Info.plist;
+				INFOPLIST_FILE = DeckOfCards/System/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

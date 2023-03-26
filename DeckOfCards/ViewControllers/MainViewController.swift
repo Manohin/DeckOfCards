@@ -48,6 +48,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func showCardsButtonTapped(_ sender: UIButton) {
+        sender.isHidden = true
         activityIndicator.startAnimating()
         resultsLabel.isHidden = false
         firstCardImageView.isHidden = false
@@ -80,11 +81,14 @@ class MainViewController: UIViewController {
                         sender.isHidden = true
                         self.restartButton.isHidden = false
                     }
+                  
                     
+                    sender.isHidden = false
                     self.firstCardImageView.image = UIImage(data: firstCardImageData)
                     self.secondCardImageView.image = UIImage(data: secondCardImageData)
                     self.progressBar.progress += 0.1
                     self.tappedCount += 1
+                    
                     
                 }
                 
