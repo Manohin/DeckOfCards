@@ -92,7 +92,6 @@ class MainViewController: UIViewController {
         
     }
     
-    
     @IBAction func restartButtonTapped() {
         
         tappedCount = 0
@@ -105,8 +104,4 @@ class MainViewController: UIViewController {
         firstCardImageView.isHidden = true
         secondCardImageView.isHidden = true
     }
-    
-    
-    
 }
-
