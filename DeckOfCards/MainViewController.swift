@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet var restartButton: UIButton!
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     var tappedCount = 0 {
         didSet {
@@ -36,6 +37,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.stopAnimating()
         resultsLabel.text = """
 Карта, содержащая число, приносит количество очков, равное номиналу. Каждая карта с картинкой или туз, приносит 10 очков.\n
 Цель:\nНабрать 20 очков за 10 ходов
@@ -44,6 +46,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func showCardsButtonTapped(_ sender: UIButton) {
+        activityIndicator.startAnimating()
         resultsLabel.isHidden = false
         firstCardImageView.isHidden = false
         secondCardImageView.isHidden = false
@@ -64,7 +67,7 @@ class MainViewController: UIViewController {
                 let firstCardImageData = try! Data(contentsOf: card.cards[0].image)
                 let secondCardImageData = try! Data(contentsOf: card.cards[1].image)
                 DispatchQueue.main.async {
-                    
+                    self.activityIndicator.stopAnimating()
                     sender.setTitle("Раздать карты", for: .normal)
                     self.resultsLabel.text = "Вы набрали " + String((Int(card.cards[0].value) ?? 10) + (Int(card.cards[1].value) ?? 10)) + " очков"
                     
